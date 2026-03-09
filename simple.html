@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cenoa gives Pakistan freelancers a real US bank account instantly. Save in USD, beat PKR devaluation. Join 50,000+ freelancers in 40+ countries.">
-    <meta name="theme-color" content="#0033FF">
+    <meta name="theme-color" content="#1440BF">
     <link rel="canonical" href="https://cenoa.com/pakistan-waitlist" />
     <title>Cenoa Pakistan — Keep Every Dollar You Earn 🇵🇰</title>
     <meta property="og:title" content="Cenoa Pakistan — Keep Every Dollar You Earn 🇵🇰">
@@ -20,62 +20,72 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --cenoa: #0033FF; --cenoa-dark: #0025CC; --cenoa-light: #EEF2FF; }
+        :root { 
+            --cenoa-blue: #1440BF; 
+            --cenoa-teal: #85D7C9; 
+            --cenoa-neon: #B0FF3A; 
+            --dark-grey: #2E2E2E; 
+            --grey: #DEE1E2;
+        }
         * { box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: #111; margin: 0; }
+        body { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #fff; color: var(--dark-grey); margin: 0; }
 
         /* Navbar */
-        nav { background: #fff; border-bottom: 1px solid #E5E7EB; padding: 12px 20px; display: flex; align-items: center; }
-        nav img { height: 24px; width: auto; }
+        nav { background: #fff; border-bottom: 1px solid var(--grey); padding: 12px 20px; display: flex; align-items: center; }
+        nav img { height: 20px; width: auto; }
 
-        /* Hero section — white background, Cenoa brand colors for text */
-        .hero { background: #fff; color: #111; padding: 40px 20px 32px; text-align: center; border-bottom: 1px solid #E5E7EB; }
+        /* Hero section — white background, clean */
+        .hero { background: #fff; color: var(--dark-grey); padding: 40px 20px 24px; text-align: center; }
         .hero-content { max-width: 672px; margin: 0 auto; }
-        .hero h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 800; line-height: 1.2; margin: 0 0 12px; color: #0A1B6F; }
-        .hero h1 span { color: #0033FF; }
-        .hero-subtitle { font-size: 1rem; color: #4B5563; margin: 0 0 24px; line-height: 1.6; }
+        .hero h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 800; line-height: 1.3; margin: 0 0 12px; color: var(--dark-grey); }
+        .hero h1 .highlight { color: var(--cenoa-blue); }
+        .hero-subtitle { font-size: 16px; color: #6B7280; margin: 0 0 20px; line-height: 1.6; }
+        .hero-subtitle strong { color: var(--cenoa-blue); }
 
         /* Trust badges */
-        .trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 28px; }
-        .trust-badge { display: inline-flex; align-items: center; gap: 6px; background: #EEF2FF; border: 1px solid #C7D2FE; border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 600; color: #0033FF; }
-        .trust-badge-dark { background: #0A1B6F; color: #fff; border-color: #0A1B6F; }
-
-        /* Platform logos */
-        .platforms-label { font-size: 11px; font-weight: 700; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
-        .platforms { display: flex; align-items: center; gap: 20px; padding: 0; justify-content: center; flex-wrap: wrap; }
-        .platforms img { height: 24px; width: auto; opacity: 0.6; filter: grayscale(20%); }
-
-        /* Social proof */
-        .social-proof { font-size: 13px; color: #6B7280; margin-top: 20px; padding: 0 16px; }
-        .country-flags { display: flex; gap: 8px; justify-content: center; margin-top: 8px; flex-wrap: wrap; align-items: center; }
-        .flag { font-size: 18px; }
+        .trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 24px; }
+        .trust-badge { display: inline-flex; align-items: center; gap: 6px; background: #F3F4F6; border: 1px solid var(--grey); border-radius: 999px; padding: 6px 14px; font-size: 12px; font-weight: 600; color: var(--dark-grey); }
 
         /* Lead form card */
         .lead-card {
             background: #fff;
             border-radius: 16px;
-            box-shadow: 0 0 0 3px #0033FF, 0 20px 60px rgba(0,51,255,0.15);
+            box-shadow: 0 0 0 2px var(--cenoa-blue), 0 12px 40px rgba(20, 64, 191, 0.12);
             padding: 32px;
         }
 
         /* Input styles */
-        .input-wrap { position: relative; display: flex; align-items: center; border: 2px solid #D1D5DB; border-radius: 10px; overflow: hidden; background: #fff; transition: border-color 0.2s; }
-        .input-wrap:focus-within { border-color: #0033FF; box-shadow: 0 0 0 3px rgba(0,51,255,0.1); }
-        .input-prefix { display: flex; align-items: center; gap: 6px; padding: 0 12px; background: #F9FAFB; border-right: 2px solid #E5E7EB; font-size: 14px; font-weight: 600; color: #374151; white-space: nowrap; height: 100%; }
-        .input-wrap input { border: none; outline: none; padding: 14px 14px; font-size: 15px; width: 100%; background: transparent; color: #111; }
+        .input-wrap { position: relative; display: flex; align-items: center; border: 2px solid var(--grey); border-radius: 10px; overflow: hidden; background: #fff; transition: border-color 0.2s; }
+        .input-wrap:focus-within { border-color: var(--cenoa-blue); box-shadow: 0 0 0 3px rgba(20, 64, 191, 0.08); }
+        .input-prefix { display: flex; align-items: center; gap: 6px; padding: 0 12px; background: #F9FAFB; border-right: 2px solid var(--grey); font-size: 14px; font-weight: 600; color: var(--dark-grey); white-space: nowrap; height: 100%; }
+        .input-wrap input { border: none; outline: none; padding: 14px 14px; font-size: 15px; width: 100%; background: transparent; color: var(--dark-grey); }
         .input-wrap input::placeholder { color: #9CA3AF; }
-        .email-wrap { display: flex; align-items: center; border: 2px solid #D1D5DB; border-radius: 10px; background: #fff; transition: border-color 0.2s; }
-        .email-wrap:focus-within { border-color: #0033FF; box-shadow: 0 0 0 3px rgba(0,51,255,0.1); }
-        .email-wrap input { border: none; outline: none; padding: 14px 14px; font-size: 15px; width: 100%; background: transparent; color: #111; }
+        .email-wrap { display: flex; align-items: center; border: 2px solid var(--grey); border-radius: 10px; background: #fff; transition: border-color 0.2s; }
+        .email-wrap:focus-within { border-color: var(--cenoa-blue); box-shadow: 0 0 0 3px rgba(20, 64, 191, 0.08); }
+        .email-wrap input { border: none; outline: none; padding: 14px 14px; font-size: 15px; width: 100%; background: transparent; color: var(--dark-grey); }
         .email-wrap input::placeholder { color: #9CA3AF; }
 
         /* CTA button */
-        .btn-cta { display: block; width: 100%; background: #0033FF; color: #fff; border: none; border-radius: 10px; padding: 16px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; }
-        .btn-cta:hover:not(:disabled) { background: #0025CC; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,51,255,0.35); }
-        .btn-cta:disabled { opacity: 0.4; cursor: not-allowed; }
+        .btn-cta { display: block; width: 100%; background: var(--cenoa-blue); color: #fff; border: none; border-radius: 10px; padding: 16px; font-size: 16px; font-weight: 700; cursor: pointer; transition: all 0.2s; font-family: 'Montserrat', sans-serif; }
+        .btn-cta:hover:not(:disabled) { background: #102E8C; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(20, 64, 191, 0.3); }
+        .btn-cta:disabled { opacity: 0.5; cursor: not-allowed; }
+
+        /* Platform logos marquee */
+        .marquee-section { background: #F9FAFB; padding: 48px 20px; border-bottom: 1px solid var(--grey); }
+        .marquee-title { text-align: center; font-size: 14px; font-weight: 700; color: #9CA3AF; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 20px; }
+        .marquee-container { overflow: hidden; position: relative; }
+        .marquee { display: flex; gap: 40px; animation: scroll 30s linear infinite; padding: 0 20px; }
+        .marquee:hover { animation-play-state: paused; }
+        .marquee-item { display: flex; align-items: center; justify-content: center; flex-shrink: 0; height: 50px; }
+        .marquee-item img { max-height: 40px; max-width: 140px; width: auto; opacity: 0.6; transition: opacity 0.2s; }
+        .marquee-item:hover img { opacity: 1; }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
 
         /* Stats */
-        .stat-num { font-size: 2.25rem; font-weight: 800; color: #0033FF; line-height: 1; }
+        .stat-num { font-size: 2.25rem; font-weight: 800; color: var(--cenoa-blue); line-height: 1; }
 
         /* Accordion */
         .acc-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
@@ -85,13 +95,13 @@
 
         /* Comparison table */
         .comp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-        .comp-table th, .comp-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #E5E7EB; }
-        .comp-table thead th { background: #F8FAFC; font-weight: 700; font-size: 13px; }
-        .comp-table thead th.cenoa-col { color: #0033FF; }
-        .cenoa-val { color: #0033FF; font-weight: 600; }
+        .comp-table th, .comp-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--grey); }
+        .comp-table thead th { background: #F8FAFC; font-weight: 700; font-size: 13px; color: var(--dark-grey); }
+        .comp-table thead th.cenoa-col { color: var(--cenoa-blue); }
+        .cenoa-val { color: var(--cenoa-blue); font-weight: 600; }
 
         /* Success */
-        .waitlist-pos { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, #0033FF, #00AAFF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+        .waitlist-pos { font-size: 3.5rem; font-weight: 800; background: linear-gradient(135deg, var(--cenoa-blue), var(--cenoa-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
         .hidden { display: none !important; }
 
         @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
@@ -109,67 +119,41 @@
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <div class="hero">
     <div class="hero-content">
-
         <!-- Trust badges -->
         <div class="trust-badges">
-            <span class="trust-badge trust-badge-dark">🇵🇰 Coming to Pakistan</span>
+            <span class="trust-badge">🇵🇰 Coming to Pakistan</span>
             <span class="trust-badge">✦ Mastercard Start Path</span>
             <span class="trust-badge">✦ Built on Stripe</span>
-            <span class="trust-badge">✦ Under 1% fees</span>
         </div>
 
-        <h1>Stop Losing Money to<br><span>PKR Devaluation</span></h1>
+        <h1>Stop Losing Money to<br><span class="highlight">PKR Devaluation</span></h1>
         <p class="hero-subtitle">
-            Cenoa gives you a <strong style="color:#0033FF;">real US bank account</strong> — instantly. Save your freelance income in USD, pay under 1% in fees, and withdraw anytime.
+            Cenoa gives you a <strong>real US bank account</strong> — instantly. Save your freelance income in USD, pay under 1% in fees, and withdraw anytime.
         </p>
 
-        <!-- Receive from label -->
-        <div class="platforms-label">Receive payments from</div>
-
-        <!-- Platform logos -->
-        <div class="platforms">
-            <img src="https://www.cenoa.com/images/profit/etsy.png" alt="Etsy">
-            <img src="https://www.cenoa.com/images/profit/wise.png" alt="Wise">
-            <img src="https://www.cenoa.com/images/profit/paypal.png" alt="PayPal">
-            <!-- Text-based logos for clarity on white bg -->
-            <span style="font-weight:800;font-size:15px;color:#6FDA44;letter-spacing:-0.5px;">Upwork</span>
-            <span style="font-weight:800;font-size:15px;color:#1DBF73;letter-spacing:-0.5px;">Fiverr</span>
-            <span style="font-weight:800;font-size:15px;color:#FF9900;letter-spacing:-0.5px;">Amazon</span>
-            <span style="font-weight:700;font-size:14px;color:#374151;background:#F3F4F6;border-radius:6px;padding:2px 8px;">Deel</span>
-        </div>
-
         <!-- Social proof -->
-        <div class="social-proof">
-            <strong style="color:#0A1B6F;">Join 50,000+ freelancers</strong> already using Cenoa.
-            Available in Turkey, Nigeria, Egypt &amp; 40+ countries — <strong style="color:#0033FF;">now coming to Pakistan.</strong>
-            <div class="country-flags" style="margin-top:10px;">
-                <span class="flag" title="Turkey">🇹🇷</span>
-                <span class="flag" title="Nigeria">🇳🇬</span>
-                <span class="flag" title="Egypt">🇪🇬</span>
-                <span class="flag" title="Pakistan">🇵🇰</span>
-                <span style="color:#9CA3AF;font-size:12px;font-weight:600;">+40 more</span>
-            </div>
-        </div>
-
+        <p style="font-size:14px;color:#6B7280;margin:20px 0 0;">
+            <strong style="color:var(--dark-grey);">50,000+ freelancers</strong> use Cenoa in Turkey, Nigeria, Egypt & 40+ countries.<br>
+            <strong style="color:var(--cenoa-blue);">Now coming to Pakistan.</strong>
+        </p>
     </div>
 </div>
 
 <!-- ═══════════════════ LEAD FORM ═══════════════════ -->
-<div class="px-4 py-10" style="background:#F5F7FF;">
+<div class="px-4 py-10" style="background:#F5F7FF;max-width:100%;">
     <div class="max-w-lg mx-auto">
-
         <!-- FORM STATE -->
         <div id="formState">
             <div class="lead-card fade-up">
                 <div class="text-center mb-6">
-                    <div style="font-size:13px;font-weight:700;color:#0033FF;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:8px;">🔥 Join the waitlist</div>
-                    <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:8px;">Claim Your Spot Before We Launch</h2>
-                    <p style="color:#6B7280;font-size:14px;line-height:1.5;">Get priority access to your free USD account the day we go live in Pakistan. No fees, no paperwork — just your ID.</p>
+                    <div style="font-size:13px;font-weight:700;color:var(--cenoa-blue);letter-spacing:0.05em;text-transform:uppercase;margin-bottom:8px;">🔥 Join the waitlist</div>
+                    <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:8px;color:var(--dark-grey);">Claim Your Spot</h2>
+                    <p style="color:#6B7280;font-size:14px;line-height:1.5;">Get priority access to your free USD account the day we launch in Pakistan. No fees, no paperwork — just your ID.</p>
                 </div>
 
                 <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:16px;">
                     <div>
-                        <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:6px;">Email address</label>
+                        <label style="display:block;font-size:13px;font-weight:600;color:var(--dark-grey);margin-bottom:6px;">Email address</label>
                         <div class="email-wrap">
                             <svg style="margin-left:12px;flex-shrink:0;color:#9CA3AF;" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                             <input type="email" id="emailInput" placeholder="you@example.com" autocomplete="email" inputmode="email">
@@ -178,7 +162,7 @@
                     </div>
 
                     <div>
-                        <label style="display:block;font-size:13px;font-weight:600;color:#374151;margin-bottom:6px;">Phone number</label>
+                        <label style="display:block;font-size:13px;font-weight:600;color:var(--dark-grey);margin-bottom:6px;">Phone number</label>
                         <div class="input-wrap">
                             <div class="input-prefix">
                                 <span>🇵🇰</span>
@@ -206,7 +190,7 @@
                 <div style="width:56px;height:56px;background:#ECFDF5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
                     <svg width="28" height="28" fill="none" stroke="#10B981" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
                 </div>
-                <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:8px;">You're in! 🎉</h2>
+                <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:8px;color:var(--dark-grey);">You're in! 🎉</h2>
                 <p style="color:#6B7280;font-size:14px;margin-bottom:24px;">We'll send you an exclusive invite the moment we launch in Pakistan.</p>
 
                 <div style="background:#F5F7FF;border-radius:12px;padding:20px;margin-bottom:20px;">
@@ -217,7 +201,7 @@
 
                 <div style="background:#F0FDF4;border-radius:12px;padding:20px;text-align:left;margin-bottom:0;">
                     <p style="font-weight:700;font-size:14px;margin-bottom:8px;">💡 Skip 500 spots per friend who joins:</p>
-                    <div style="background:#fff;border:1px solid #D1FAE5;border-radius:8px;padding:10px 12px;font-size:12px;color:#374151;word-break:break-all;margin-bottom:12px;" id="refLinkBox">loading…</div>
+                    <div style="background:#fff;border:1px solid #D1FAE5;border-radius:8px;padding:10px 12px;font-size:12px;color:var(--dark-grey);word-break:break-all;margin-bottom:12px;" id="refLinkBox">loading…</div>
                     <button id="pk_whatsapp_share" style="display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:#25D366;color:#fff;border:none;border-radius:10px;padding:14px;font-size:15px;font-weight:700;cursor:pointer;transition:background 0.2s;">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         Share on WhatsApp
@@ -228,13 +212,43 @@
     </div>
 </div>
 
+<!-- ═══════════════════ PLATFORM LOGOS MARQUEE ═══════════════════ -->
+<div class="marquee-section">
+    <div class="max-w-5xl mx-auto">
+        <div class="marquee-title">Receive payments from</div>
+        <div class="marquee-container">
+            <div class="marquee">
+                <!-- First set -->
+                <div class="marquee-item"><img src="https://www.cenoa.com/images/profit/etsy.png" alt="Etsy"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/upwork.svg" alt="Upwork"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/fiverr.svg" alt="Fiverr"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/amazon.svg" alt="Amazon"></div>
+                <div class="marquee-item"><img src="https://www.cenoa.com/images/profit/paypal.png" alt="PayPal"></div>
+                <div class="marquee-item"><img src="https://www.cenoa.com/images/profit/wise.png" alt="Wise"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/shopify.svg" alt="Shopify"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/stripe.svg" alt="Stripe"></div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="marquee-item"><img src="https://www.cenoa.com/images/profit/etsy.png" alt="Etsy"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/upwork.svg" alt="Upwork"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/fiverr.svg" alt="Fiverr"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/amazon.svg" alt="Amazon"></div>
+                <div class="marquee-item"><img src="https://www.cenoa.com/images/profit/paypal.png" alt="PayPal"></div>
+                <div class="marquee-item"><img src="https://www.cenoa.com/images/profit/wise.png" alt="Wise"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/shopify.svg" alt="Shopify"></div>
+                <div class="marquee-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/stripe.svg" alt="Stripe"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- ═══════════════════ MAIN CONTENT ═══════════════════ -->
 <div class="px-4 py-12" style="max-width:672px;margin:0 auto;">
 
     <!-- Value prop -->
     <div style="text-align:center;margin-bottom:48px;">
-        <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:12px;">Finally. Keep what you actually earn. 💰</h2>
-        <p style="color:#6B7280;font-size:15px;line-height:1.7;max-width:520px;margin:0 auto;">You didn't work this hard to lose 5–8% of every payment to Payoneer or bank fees. That's like giving away a full month's income every year. Cenoa gives you a US account instantly — no paperwork, just your ID.</p>
+        <h2 style="font-size:1.75rem;font-weight:800;margin-bottom:12px;color:var(--dark-grey);">Finally. Keep what you actually earn. 💰</h2>
+        <p style="color:#6B7280;font-size:15px;line-height:1.7;">You didn't work this hard to lose 5–8% of every payment to Payoneer or bank fees. That's like giving away a full month's income every year. Cenoa gives you a US account instantly — no paperwork, just your ID.</p>
     </div>
 
     <!-- Stats -->
@@ -245,7 +259,7 @@
     </div>
 
     <!-- Trust section -->
-    <h2 style="font-size:1.5rem;font-weight:800;text-align:center;margin-bottom:24px;">Trusted by thousands of remote professionals</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;text-align:center;margin-bottom:24px;color:var(--dark-grey);">Trusted by thousands of remote professionals</h2>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;margin-bottom:24px;">
         <div style="background:#F5F7FF;border-radius:12px;padding:20px;"><div class="stat-num">85x</div><p style="color:#6B7280;font-size:12px;margin-top:6px;">Transaction volume growth</p></div>
         <div style="background:#F5F7FF;border-radius:12px;padding:20px;"><div class="stat-num">10x</div><p style="color:#6B7280;font-size:12px;margin-top:6px;">Lower fees than Payoneer</p></div>
@@ -254,21 +268,21 @@
     <p style="color:#6B7280;font-size:13px;text-align:center;margin-bottom:24px;">Selected for Mastercard Start Path — one of only 7 blockchain fintechs chosen globally in 2023. Built on Stripe and Lead Bank.</p>
 
     <!-- Fee comparison -->
-    <div style="border:1px solid #E5E7EB;border-radius:12px;margin-bottom:32px;overflow:hidden;">
-        <button onclick="toggleAcc(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;font-weight:600;font-size:14px;text-align:left;">
+    <div style="border:1px solid var(--grey);border-radius:12px;margin-bottom:32px;overflow:hidden;">
+        <button onclick="toggleAcc(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;font-weight:600;font-size:14px;text-align:left;color:var(--dark-grey);">
             How much can I save vs Payoneer?
             <svg class="acc-icon" width="18" height="18" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="acc-content" style="padding:0 20px;color:#6B7280;font-size:14px;">
             <div style="padding-bottom:16px;">
                 <p style="margin-bottom:12px;">On $1,000 received: Payoneer charges up to $85. Cenoa charges under $10. <strong>That's $75+ more in your pocket</strong> every payment.</p>
-                <div style="overflow-x:auto;"><table class="comp-table" style="border:1px solid #E5E7EB;border-radius:8px;overflow:hidden;">
+                <div style="overflow-x:auto;"><table class="comp-table" style="border:1px solid var(--grey);border-radius:8px;overflow:hidden;">
                     <thead><tr><th></th><th class="cenoa-col">Cenoa</th><th>Payoneer</th></tr></thead>
                     <tbody>
                         <tr><td>Receive fee</td><td class="cenoa-val">0.5%</td><td>Up to 3%</td></tr>
                         <tr><td>Withdrawal fee</td><td class="cenoa-val">~0.5%</td><td>Up to 2%</td></tr>
                         <tr><td>Exchange rate markup</td><td class="cenoa-val">Minimal</td><td>Up to 3.5%</td></tr>
-                        <tr><td>Total on $1,000</td><td style="color:#0033FF;font-weight:700;">~$10</td><td style="color:#EF4444;font-weight:700;">Up to $85</td></tr>
+                        <tr><td>Total on $1,000</td><td style="color:var(--cenoa-blue);font-weight:700;">~$10</td><td style="color:#EF4444;font-weight:700;">Up to $85</td></tr>
                     </tbody>
                 </table></div>
             </div>
@@ -276,47 +290,25 @@
     </div>
 
     <!-- Testimonial -->
-    <div style="background:#F5F7FF;border-left:4px solid #0033FF;border-radius:8px;padding:20px;margin-bottom:48px;">
+    <div style="background:#F5F7FF;border-left:4px solid var(--cenoa-blue);border-radius:8px;padding:20px;margin-bottom:48px;">
         <p style="font-style:italic;color:#374151;margin-bottom:10px;">"Switching from Payoneer saved me over $200 monthly. Setup took 5 minutes with just my passport."</p>
-        <p style="font-weight:700;font-size:14px;margin-bottom:2px;">Ahmed K.</p>
+        <p style="font-weight:700;font-size:14px;margin-bottom:2px;color:var(--dark-grey);">Ahmed K.</p>
         <p style="color:#6B7280;font-size:13px;">Freelance Developer · Works with US clients</p>
     </div>
 
     <!-- Feature cards -->
-    <h2 style="font-size:1.5rem;font-weight:800;text-align:center;margin-bottom:20px;margin-top:48px;">Everything you need to get paid globally</h2>
+    <h2 style="font-size:1.5rem;font-weight:800;text-align:center;margin-bottom:20px;margin-top:48px;color:var(--dark-grey);">Everything you need to get paid globally</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:48px;">
-        <div style="background:#F8FAFF;border:1px solid #E0E7FF;border-radius:12px;padding:20px;"><div style="color:#0033FF;font-size:11px;font-weight:700;">01</div><h4 style="font-weight:700;margin:6px 0 4px;">US Account, Instantly</h4><p style="color:#6B7280;font-size:13px;">Open with just your ID, receive ACH payments right away</p></div>
-        <div style="background:#F8FAFF;border:1px solid #E0E7FF;border-radius:12px;padding:20px;"><div style="color:#0033FF;font-size:11px;font-weight:700;">02</div><h4 style="font-weight:700;margin:6px 0 4px;">Platform Integration</h4><p style="color:#6B7280;font-size:13px;">Works with Upwork, Fiverr, Amazon, Etsy, Deel and more</p></div>
-        <div style="background:#F8FAFF;border:1px solid #E0E7FF;border-radius:12px;padding:20px;"><div style="color:#0033FF;font-size:11px;font-weight:700;">03</div><h4 style="font-weight:700;margin:6px 0 4px;">Digital Dollar Card</h4><p style="color:#6B7280;font-size:13px;">Spend globally with Apple Pay and Google Pay support</p></div>
-        <div style="background:#F8FAFF;border:1px solid #E0E7FF;border-radius:12px;padding:20px;"><div style="color:#0033FF;font-size:11px;font-weight:700;">04</div><h4 style="font-weight:700;margin:6px 0 4px;">USDC Crypto Withdrawal</h4><p style="color:#6B7280;font-size:13px;">Withdraw to your own crypto wallet anytime</p></div>
-        <div style="background:#F8FAFF;border:1px solid #E0E7FF;border-radius:12px;padding:20px;"><div style="color:#0033FF;font-size:11px;font-weight:700;">05</div><h4 style="font-weight:700;margin:6px 0 4px;">P2P Transfers Free</h4><p style="color:#6B7280;font-size:13px;">Send to other Cenoa users instantly at no cost</p></div>
-        <div style="background:#F8FAFF;border:1px solid #E0E7FF;border-radius:12px;padding:20px;"><div style="color:#0033FF;font-size:11px;font-weight:700;">06</div><h4 style="font-weight:700;margin:6px 0 4px;">Real Live Support</h4><p style="color:#6B7280;font-size:13px;">Get help from real humans when you need it</p></div>
-    </div>
-
-    <!-- FAQ -->
-    <h2 style="font-size:1.5rem;font-weight:800;text-align:center;margin-bottom:8px;">Your questions, answered</h2>
-    <p style="color:#6B7280;font-size:14px;text-align:center;margin-bottom:24px;">Honest answers before you trust us with your income.</p>
-    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:48px;">
-        <div style="border:1px solid #E5E7EB;border-radius:12px;">
-            <button onclick="toggleAcc(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;font-weight:600;font-size:14px;text-align:left;">Is my money actually safe with Cenoa?<svg class="acc-icon" width="18" height="18" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-            <div class="acc-content" style="padding:0 20px;color:#6B7280;font-size:14px;line-height:1.7;"><div style="padding-bottom:16px;"><p style="margin-bottom:8px;">Your US account is held at Lead Bank through Stripe's Bridge — real US banking infrastructure subject to US banking regulations.</p><p>Cenoa operates on a non-custodial model — you control your wallet. Your funds aren't sitting in Cenoa's accounts.</p></div></div>
-        </div>
-        <div style="border:1px solid #E5E7EB;border-radius:12px;">
-            <button onclick="toggleAcc(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;font-weight:600;font-size:14px;text-align:left;">Are there any limits I should know about?<svg class="acc-icon" width="18" height="18" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-            <div class="acc-content" style="padding:0 20px;color:#6B7280;font-size:14px;line-height:1.7;"><div style="padding-bottom:16px;"><p style="margin-bottom:8px;">Monthly limit: $150,000 for receiving payments. Single payment limit: $4,000 from accounts not in your name. For most freelancers, these limits are more than enough.</p></div></div>
-        </div>
-        <div style="border:1px solid #E5E7EB;border-radius:12px;">
-            <button onclick="toggleAcc(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;font-weight:600;font-size:14px;text-align:left;">How long does it really take to set up?<svg class="acc-icon" width="18" height="18" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-            <div class="acc-content" style="padding:0 20px;color:#6B7280;font-size:14px;line-height:1.7;"><div style="padding-bottom:16px;"><p>Individual accounts: about 3 minutes with just your ID. Business accounts take 3–7 days for additional verification. Faster than banks or Payoneer.</p></div></div>
-        </div>
-        <div style="border:1px solid #E5E7EB;border-radius:12px;">
-            <button onclick="toggleAcc(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:none;border:none;cursor:pointer;font-weight:600;font-size:14px;text-align:left;">Who is behind Cenoa?<svg class="acc-icon" width="18" height="18" fill="none" stroke="#9CA3AF" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
-            <div class="acc-content" style="padding:0 20px;color:#6B7280;font-size:14px;line-height:1.7;"><div style="padding-bottom:16px;"><p>Cenoa Pte. Ltd., selected for Mastercard Start Path (2023) — 1 of 7 blockchain fintechs globally. Partners: Stripe, Lead Bank, Circle (USDC), and RedotPay.</p></div></div>
-        </div>
+        <div style="background:#F8FAFF;border:1px solid var(--grey);border-radius:12px;padding:20px;"><div style="color:var(--cenoa-blue);font-size:11px;font-weight:700;">01</div><h4 style="font-weight:700;margin:6px 0 4px;color:var(--dark-grey);">US Account, Instantly</h4><p style="color:#6B7280;font-size:13px;">Open with just your ID, receive ACH payments right away</p></div>
+        <div style="background:#F8FAFF;border:1px solid var(--grey);border-radius:12px;padding:20px;"><div style="color:var(--cenoa-blue);font-size:11px;font-weight:700;">02</div><h4 style="font-weight:700;margin:6px 0 4px;color:var(--dark-grey);">Platform Integration</h4><p style="color:#6B7280;font-size:13px;">Works with Upwork, Fiverr, Amazon, Etsy, Deel and more</p></div>
+        <div style="background:#F8FAFF;border:1px solid var(--grey);border-radius:12px;padding:20px;"><div style="color:var(--cenoa-blue);font-size:11px;font-weight:700;">03</div><h4 style="font-weight:700;margin:6px 0 4px;color:var(--dark-grey);">Digital Dollar Card</h4><p style="color:#6B7280;font-size:13px;">Spend globally with Apple Pay and Google Pay support</p></div>
+        <div style="background:#F8FAFF;border:1px solid var(--grey);border-radius:12px;padding:20px;"><div style="color:var(--cenoa-blue);font-size:11px;font-weight:700;">04</div><h4 style="font-weight:700;margin:6px 0 4px;color:var(--dark-grey);">USDC Crypto Withdrawal</h4><p style="color:#6B7280;font-size:13px;">Withdraw to your own crypto wallet anytime</p></div>
+        <div style="background:#F8FAFF;border:1px solid var(--grey);border-radius:12px;padding:20px;"><div style="color:var(--cenoa-blue);font-size:11px;font-weight:700;">05</div><h4 style="font-weight:700;margin:6px 0 4px;color:var(--dark-grey);">P2P Transfers Free</h4><p style="color:#6B7280;font-size:13px;">Send to other Cenoa users instantly at no cost</p></div>
+        <div style="background:#F8FAFF;border:1px solid var(--grey);border-radius:12px;padding:20px;"><div style="color:var(--cenoa-blue);font-size:11px;font-weight:700;">06</div><h4 style="font-weight:700;margin:6px 0 4px;color:var(--dark-grey);">Real Live Support</h4><p style="color:#6B7280;font-size:13px;">Get help from real humans when you need it</p></div>
     </div>
 
     <!-- Footer -->
-    <footer style="border-top:1px solid #E5E7EB;padding-top:24px;padding-bottom:40px;display:flex;flex-wrap:wrap;gap:32px;">
+    <footer style="border-top:1px solid var(--grey);padding-top:24px;padding-bottom:40px;display:flex;flex-wrap:wrap;gap:32px;">
         <div><p style="font-size:11px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Company</p><a href="https://cenoa.com" style="display:block;font-size:14px;color:#6B7280;text-decoration:none;margin-bottom:4px;">Homepage</a><a href="mailto:support@cenoa.com" style="display:block;font-size:14px;color:#6B7280;text-decoration:none;">Help</a></div>
         <div><p style="font-size:11px;font-weight:700;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Legal</p><a href="https://www.cenoa.com/terms" style="display:block;font-size:14px;color:#6B7280;text-decoration:none;margin-bottom:4px;">Terms</a><a href="https://www.cenoa.com/privacy" style="display:block;font-size:14px;color:#6B7280;text-decoration:none;">Privacy policy</a></div>
     </footer>
