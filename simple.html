@@ -8,9 +8,8 @@
     <link rel="canonical" href="https://cenoa.com/pakistan-waitlist" />
     <title>Cenoa — US Bank Account for Pakistan Freelancers 🇵🇰</title>
 
-    <!-- OG Tags -->
     <meta property="og:title" content="Cenoa — Save in USD, Beat PKR Inflation 🇵🇰">
-    <meta property="og:description" content="Protect your freelance earnings from PKR devaluation. Join 15,000+ early birds to get your USD account before anyone else.">
+    <meta property="og:description" content="Protect your freelance earnings from PKR devaluation. Join 15,000+ early birds.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cenoa.com/pakistan-waitlist">
 
@@ -33,25 +32,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        cenoa: '#0033FF',
-                        'cenoa-dark': '#0025CC',
-                        'cenoa-light': '#E8EEFF',
-                        cyan: '#00D9FF'
-                    }
-                }
-            }
+            theme: { extend: { colors: { cenoa: '#0033FF', 'cenoa-dark': '#0025CC' } } }
         }
     </script>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
         .fade-in { animation: fadeIn 0.5s ease-out; }
         @keyframes fadeIn { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
-        .option-btn { transition: all 0.2s; border: 2px solid #E5E7EB; }
-        .option-btn:hover { border-color: #0033FF; background: #F0F4FF; }
-        .option-btn.selected { background: #0033FF; color: #fff; border-color: #0033FF; }
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .accordion-content.open { max-height: 600px; }
         .accordion-icon { transition: transform 0.3s; }
@@ -61,15 +48,15 @@
         .cenoa-table th { background: #F8FAFC; }
         .cenoa-table td, .cenoa-table th { padding: 12px 16px; text-align: left; border-bottom: 1px solid #E5E7EB; font-size: 0.875rem; }
         .waitlist-num { font-size: 3rem; font-weight: 800; background: linear-gradient(135deg, #0033FF, #00D9FF); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        input:focus { outline: none; border-color: #0033FF; }
     </style>
 </head>
 <body class="bg-white text-gray-900">
-    <!-- GTM noscript -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NDV9WQ7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <main class="max-w-2xl mx-auto px-4 py-8 sm:py-14">
 
-        <!-- ============ HERO ============ -->
+        <!-- HERO -->
         <section class="text-center mb-10">
             <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight mb-4">
                 Save in USD, Beat Inflation.<br>Cenoa is coming to Pakistan 🇵🇰
@@ -79,55 +66,34 @@
             </p>
         </section>
 
-        <!-- ============ SIMPLE FORM ============ -->
+        <!-- FORM -->
         <section id="formSection" class="bg-gray-50 rounded-2xl p-6 sm:p-8 mb-12">
 
-            <!-- Form Step -->
+            <!-- Input Step -->
             <div id="formStep" class="fade-in">
-                <h3 class="text-lg font-bold mb-1">How much do you receive monthly from international platforms?</h3>
-                <p class="text-gray-500 text-sm mb-5">Required to unlock your free account</p>
+                <h3 class="text-lg font-bold mb-1">Get early access to Cenoa in Pakistan</h3>
+                <p class="text-gray-500 text-sm mb-6">Enter your details to reserve your spot on the waitlist.</p>
 
-                <div class="space-y-3 mb-6" id="incomeOptions">
-                    <button class="option-btn w-full text-left px-4 py-3 rounded-lg font-medium flex items-center gap-3" data-v="Not receiving yet">
-                        <span class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></span>
-                        <span><span class="block">Not receiving payments yet</span><span class="text-xs text-gray-400">I want to have my account ready</span></span>
-                    </button>
-                    <button class="option-btn w-full text-left px-4 py-3 rounded-lg font-medium flex items-center gap-3" data-v="Up to $500">
-                        <span class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></span>
-                        Up to $500
-                    </button>
-                    <button class="option-btn w-full text-left px-4 py-3 rounded-lg font-medium flex items-center gap-3" data-v="$500-$2,000">
-                        <span class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></span>
-                        $500 – $2,000
-                    </button>
-                    <button class="option-btn w-full text-left px-4 py-3 rounded-lg font-medium flex items-center gap-3" data-v="$2,000-$5,000">
-                        <span class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></span>
-                        $2,000 – $5,000
-                    </button>
-                    <button class="option-btn w-full text-left px-4 py-3 rounded-lg font-medium flex items-center gap-3" data-v="$5,000+">
-                        <span class="w-5 h-5 rounded-full border-2 border-gray-300 flex-shrink-0"></span>
-                        $5,000+
-                    </button>
-                </div>
-
-                <div class="space-y-3 mb-4">
-                    <input type="email" id="emailInput" placeholder="your@email.com" required
-                        class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-cenoa focus:outline-none text-sm sm:text-base">
-                    <input type="tel" id="phoneInput" placeholder="+92 300 1234567 (optional)"
-                        class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-cenoa focus:outline-none text-sm sm:text-base">
+                <div class="space-y-3 mb-5">
+                    <input type="email" id="emailInput" placeholder="your@email.com"
+                        class="w-full px-4 py-3.5 rounded-lg border-2 border-gray-200 text-sm sm:text-base transition-colors">
+                    <input type="tel" id="phoneInput" placeholder="+92 300 1234567"
+                        class="w-full px-4 py-3.5 rounded-lg border-2 border-gray-200 text-sm sm:text-base transition-colors">
                 </div>
 
                 <button id="pk_waitlist_submit" disabled
-                    class="w-full bg-cenoa hover:bg-cenoa-dark disabled:opacity-40 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold transition-all">
-                    Submit Answer &amp; Join the Waitlist
+                    class="w-full bg-cenoa hover:bg-cenoa-dark disabled:opacity-40 disabled:cursor-not-allowed text-white py-3.5 rounded-lg font-semibold text-base transition-all">
+                    Join the Waitlist
                 </button>
-                <p class="text-center text-xs text-gray-400 mt-3">⚡ You'll get priority access when we launch in Pakistan</p>
+                <p class="text-center text-xs text-gray-400 mt-3">No spam. Only launch updates for Pakistan.</p>
             </div>
 
             <!-- Success Step -->
             <div id="successStep" class="step-hidden">
                 <div class="text-center fade-in">
-                    <svg class="w-14 h-14 mx-auto mb-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <svg class="w-14 h-14 mx-auto mb-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
                     <h2 class="text-2xl font-bold mb-2">You're on the list! 🎉</h2>
                     <p class="text-gray-600 text-sm mb-6">We'll notify you first when Cenoa launches in Pakistan.</p>
 
@@ -149,7 +115,7 @@
             </div>
         </section>
 
-        <!-- ============ QUICK STATS ============ -->
+        <!-- QUICK STATS -->
         <section class="grid grid-cols-3 gap-4 text-center mb-16">
             <div>
                 <div class="stat-highlight">0.99%</div>
@@ -165,7 +131,7 @@
             </div>
         </section>
 
-        <!-- ============ TRUSTED BY THOUSANDS ============ -->
+        <!-- TRUSTED BY THOUSANDS -->
         <section class="mb-16">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-8">Trusted by thousands of remote professionals</h2>
             <div class="grid grid-cols-3 gap-4 text-center mb-8">
@@ -182,9 +148,8 @@
                     <p class="text-gray-500 text-xs mt-2">Processing volume growth in 6 months</p>
                 </div>
             </div>
-            <p class="text-gray-600 text-sm text-center mb-6">Selected for Mastercard Start Path— one of only 7 blockchain fintechs chosen globally in 2023. Built on Stripe and Lead Bank infrastructure.</p>
+            <p class="text-gray-600 text-sm text-center mb-6">Selected for Mastercard Start Path — one of only 7 blockchain fintechs chosen globally in 2023. Built on Stripe and Lead Bank infrastructure.</p>
 
-            <!-- Accordion: Why trust Cenoa -->
             <div class="border border-gray-200 rounded-xl mb-3">
                 <button class="accordion-trigger w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-sm" onclick="toggleAccordion(this)">
                     Why do professionals trust Cenoa with their income?
@@ -202,7 +167,6 @@
                 </div>
             </div>
 
-            <!-- Accordion: Fee comparison -->
             <div class="border border-gray-200 rounded-xl mb-6">
                 <button class="accordion-trigger w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-sm" onclick="toggleAccordion(this)">
                     How much can I actually save compared to Payoneer?
@@ -224,7 +188,6 @@
                 </div>
             </div>
 
-            <!-- Testimonial -->
             <div class="bg-gray-50 rounded-xl p-6">
                 <p class="text-gray-700 italic mb-4">"Switching from Payoneer saved me over $200 monthly. Setup took 5 minutes with just my passport."</p>
                 <p class="font-bold text-sm">Ahmed K.</p>
@@ -232,7 +195,7 @@
             </div>
         </section>
 
-        <!-- ============ WHY YOUR CURRENT METHOD COSTS MORE ============ -->
+        <!-- WHY YOUR CURRENT METHOD COSTS MORE -->
         <section class="mb-16">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-4">Why your current payment method costs you more</h2>
             <p class="text-gray-600 text-sm text-center mb-8">Every $1,000 you earn, traditional services quietly take $50-85. Over a year of regular payments, that's thousands lost to fees you don't need to pay.</p>
@@ -281,40 +244,16 @@
             </div>
         </section>
 
-        <!-- ============ FEATURES ============ -->
+        <!-- FEATURES -->
         <section class="mb-16">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-8">Everything you need to get paid globally</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                <div class="bg-gray-50 rounded-xl p-5">
-                    <span class="text-cenoa font-bold text-xs">01</span>
-                    <h4 class="font-bold mt-1 mb-1">US Account, Instantly</h4>
-                    <p class="text-gray-500 text-sm">Open with just your ID, receive ACH payments right away</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-5">
-                    <span class="text-cenoa font-bold text-xs">02</span>
-                    <h4 class="font-bold mt-1 mb-1">Platform Integration</h4>
-                    <p class="text-gray-500 text-sm">Works with Upwork, Fiverr, Amazon, Etsy, Deel and more</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-5">
-                    <span class="text-cenoa font-bold text-xs">03</span>
-                    <h4 class="font-bold mt-1 mb-1">Digital Dollar Card</h4>
-                    <p class="text-gray-500 text-sm">Spend globally with Apple Pay and Google Pay support</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-5">
-                    <span class="text-cenoa font-bold text-xs">04</span>
-                    <h4 class="font-bold mt-1 mb-1">USDC Crypto Withdrawal</h4>
-                    <p class="text-gray-500 text-sm">Withdraw to your own crypto wallet anytime</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-5">
-                    <span class="text-cenoa font-bold text-xs">05</span>
-                    <h4 class="font-bold mt-1 mb-1">P2P Transfers Free</h4>
-                    <p class="text-gray-500 text-sm">Send to other Cenoa users instantly at no cost</p>
-                </div>
-                <div class="bg-gray-50 rounded-xl p-5">
-                    <span class="text-cenoa font-bold text-xs">06</span>
-                    <h4 class="font-bold mt-1 mb-1">Real Live Support</h4>
-                    <p class="text-gray-500 text-sm">Get help from real humans when you need it</p>
-                </div>
+                <div class="bg-gray-50 rounded-xl p-5"><span class="text-cenoa font-bold text-xs">01</span><h4 class="font-bold mt-1 mb-1">US Account, Instantly</h4><p class="text-gray-500 text-sm">Open with just your ID, receive ACH payments right away</p></div>
+                <div class="bg-gray-50 rounded-xl p-5"><span class="text-cenoa font-bold text-xs">02</span><h4 class="font-bold mt-1 mb-1">Platform Integration</h4><p class="text-gray-500 text-sm">Works with Upwork, Fiverr, Amazon, Etsy, Deel and more</p></div>
+                <div class="bg-gray-50 rounded-xl p-5"><span class="text-cenoa font-bold text-xs">03</span><h4 class="font-bold mt-1 mb-1">Digital Dollar Card</h4><p class="text-gray-500 text-sm">Spend globally with Apple Pay and Google Pay support</p></div>
+                <div class="bg-gray-50 rounded-xl p-5"><span class="text-cenoa font-bold text-xs">04</span><h4 class="font-bold mt-1 mb-1">USDC Crypto Withdrawal</h4><p class="text-gray-500 text-sm">Withdraw to your own crypto wallet anytime</p></div>
+                <div class="bg-gray-50 rounded-xl p-5"><span class="text-cenoa font-bold text-xs">05</span><h4 class="font-bold mt-1 mb-1">P2P Transfers Free</h4><p class="text-gray-500 text-sm">Send to other Cenoa users instantly at no cost</p></div>
+                <div class="bg-gray-50 rounded-xl p-5"><span class="text-cenoa font-bold text-xs">06</span><h4 class="font-bold mt-1 mb-1">Real Live Support</h4><p class="text-gray-500 text-sm">Get help from real humans when you need it</p></div>
             </div>
 
             <div class="border border-gray-200 rounded-xl mb-3">
@@ -355,11 +294,10 @@
             </div>
         </section>
 
-        <!-- ============ FAQ ============ -->
+        <!-- FAQ -->
         <section class="mb-16">
             <h2 class="text-2xl sm:text-3xl font-extrabold text-center mb-3">Your questions, answered</h2>
             <p class="text-gray-600 text-sm text-center mb-8">We know you have questions before trusting a new platform with your income. Here are the honest answers.</p>
-
             <div class="space-y-3">
                 <div class="border border-gray-200 rounded-xl">
                     <button class="accordion-trigger w-full flex items-center justify-between px-5 py-4 text-left font-semibold text-sm" onclick="toggleAccordion(this)">
@@ -412,7 +350,7 @@
             </div>
         </section>
 
-        <!-- ============ FOOTER ============ -->
+        <!-- FOOTER -->
         <footer class="border-t border-gray-200 pt-8 pb-12">
             <div class="flex flex-wrap gap-x-8 gap-y-4 text-sm">
                 <div>
@@ -430,8 +368,6 @@
     </main>
 
     <script>
-        /* ---- State ---- */
-        let selectedIncome = null;
         const urlParams = new URLSearchParams(window.location.search);
         const referrer = urlParams.get('ref') || 'organic';
         const refCode = 'pk_' + Math.random().toString(36).substr(2,9).toUpperCase();
@@ -439,56 +375,31 @@
 
         function track(event, data={}) { window.dataLayer && window.dataLayer.push({ event, ...data }); }
 
-        /* Income option clicks */
-        document.querySelectorAll('#incomeOptions .option-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('#incomeOptions .option-btn').forEach(b => b.classList.remove('selected'));
-                btn.classList.add('selected');
-                selectedIncome = btn.dataset.v;
-                track('quiz_interaction', { question_id: 'income', selected_option: selectedIncome });
-                checkFormValid();
-            });
-        });
-
-        /* Check if form is valid */
-        function checkFormValid() {
+        function checkValid() {
             const email = document.getElementById('emailInput').value.trim();
-            const valid = selectedIncome && email && email.includes('@');
-            document.getElementById('pk_waitlist_submit').disabled = !valid;
+            const phone = document.getElementById('phoneInput').value.trim();
+            document.getElementById('pk_waitlist_submit').disabled = !(email && email.includes('@') && phone);
         }
-        document.getElementById('emailInput').addEventListener('input', checkFormValid);
-        document.getElementById('phoneInput').addEventListener('input', checkFormValid);
+        document.getElementById('emailInput').addEventListener('input', checkValid);
+        document.getElementById('phoneInput').addEventListener('input', checkValid);
 
-        /* Submit */
         document.getElementById('pk_waitlist_submit').addEventListener('click', () => {
             const email = document.getElementById('emailInput').value.trim();
             const phone = document.getElementById('phoneInput').value.trim();
-            if (!selectedIncome || !email) return;
-
+            if (!email || !phone) return;
             position = Math.max(1, position - Math.floor(Math.random()*80+20));
-            track('quiz_interaction', {
-                question_id: 'submit',
-                selected_option: 'completed',
-                email: email,
-                phone: phone,
-                income: selectedIncome,
-                ref: referrer
-            });
-
-            // Show success
+            track('quiz_interaction', { question_id: 'submit', selected_option: 'completed', email, phone, ref: referrer });
             document.getElementById('formStep').classList.add('step-hidden');
-            document.getElementById('successStep').classList.remove('step-hidden');
+            const success = document.getElementById('successStep');
+            success.classList.remove('step-hidden');
             document.getElementById('positionNum').textContent = position.toLocaleString();
             document.getElementById('refLinkBox').textContent = window.location.origin + window.location.pathname + '?ref=' + refCode;
-
-            // Slow increment
             setInterval(() => {
                 position = Math.max(1, position - Math.floor(Math.random()*3));
                 document.getElementById('positionNum').textContent = position.toLocaleString();
             }, 8000);
         });
 
-        /* WhatsApp */
         document.getElementById('pk_whatsapp_share').addEventListener('click', () => {
             const link = window.location.origin + window.location.pathname + '?ref=' + refCode;
             const msg = `🇵🇰 Save in USD, Beat PKR Inflation! I just joined Cenoa's Pakistan waitlist (position #${position}). Skip 500 spots with my link: ${link}`;
@@ -496,12 +407,9 @@
             window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
         });
 
-        /* Accordion */
         function toggleAccordion(trigger) {
-            const content = trigger.nextElementSibling;
-            const icon = trigger.querySelector('.accordion-icon');
-            content.classList.toggle('open');
-            icon.classList.toggle('open');
+            trigger.nextElementSibling.classList.toggle('open');
+            trigger.querySelector('.accordion-icon').classList.toggle('open');
         }
     </script>
 </body>
