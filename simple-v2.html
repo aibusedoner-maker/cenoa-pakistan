@@ -485,13 +485,15 @@
         checkValid();
     });
 
-    // ── Lead Submission ───────────────────────────────────────────────────────
+        // ── Lead Submission + Sheet Save ─────────────────────────────────────────
     document.getElementById('pk_waitlist_submit').addEventListener('click', () => {
         const email = document.getElementById('emailInput').value.trim();
         const phone = '+92' + document.getElementById('phoneInput').value.trim();
         if (!isValidEmail(email) || !isValidPhone(phone)) return;
+
         position = Math.max(1, position - Math.floor(Math.random()*150+50));
 
+        // 1. Track
         track('pk_lead_submitted', {
             page_variant: 'v2_tool_focused',
             email: email,
@@ -500,6 +502,20 @@
             traffic_source: referrer
         });
 
+        // 2. Save to Google Sheet (Content-Type: text/plain avoids CORS preflight)
+        fetch('https://script.google.com/macros/s/AKfycbx0f2TAPN3MjS0IvPIHr6s1WXw8wBqdBu-2KX_r0o3StUhF_m2I1O4HJYHe9PTLi3s/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain' },
+            body: JSON.stringify({
+                email: email,
+                phone: phone,
+                page_variant: 'v2_tool_focused',
+                member_id: position,
+                traffic_source: referrer
+            })
+        }).catch(err => console.error('Sheet save failed:', err));
+
+        // 3. Show success screen
         document.getElementById('formState').classList.add('hidden');
         document.getElementById('successState').classList.remove('hidden');
         document.getElementById('positionNum').textContent = position.toLocaleString();
@@ -526,43 +542,6 @@
         const msg = `Hey! I just joined the Cenoa Pakistan movement to get a free USD account and 30+ freelancer tools. Check it out: https://cenoa.com/pakistan-waitlist-v2?utm_source=whatsapp&utm_medium=referral&utm_campaign=pakistan_movement&utm_content=v2_share`;
         window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
     });
-
-    // ── Form Submission Handler ────────────────────────────────────────────
-    document.getElementById('pk_waitlist_submit').addEventListener('click', () => {
-        const email = document.getElementById('emailInput').value.trim();
-        const phone = '+92' + document.getElementById('phoneInput').value.trim();
-        if (!isValidEmail(email) || !isValidPhone(phone)) return;
-        position = Math.max(1, position - Math.floor(Math.random()*150+50));
-
-        track('pk_lead_submitted', {
-            page_variant: 'v2_tool_focused',
-            email: email,
-            phone: phone,
-            member_id: position,
-            traffic_source: referrer
-        });
-
-        // Send to Google Sheet
-        fetch('https://script.google.com/macros/s/AKfycbx0f2TAPN3MjS0IvPIHr6s1WXw8wBqdBu-2KX_r0o3StUhF_m2I1O4HJYHe9PTLi3s/exec', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                email: email,
-                phone: phone,
-                page_variant: 'v2_tool_focused',
-                member_id: position,
-                traffic_source: referrer
-            })
-        }).catch(err => console.error('Sheet save failed:', err));
-
-        document.getElementById('formState').classList.add('hidden');
-        document.getElementById('successState').classList.remove('hidden');
-        document.getElementById('positionNum').textContent = position.toLocaleString();
-        const ordinals = ['th','st','nd','rd'];
-        const v = position % 100;
-        document.getElementById('positionOrdinal').textContent = (ordinals[(v-20)%10] || ordinals[v] || ordinals[0]);
-    });
-
     function toggleAcc(btn) {
         btn.nextElementSibling.classList.toggle('open');
         btn.querySelector('.acc-icon').classList.toggle('open');
