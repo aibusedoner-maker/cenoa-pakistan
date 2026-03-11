@@ -422,8 +422,19 @@
     const refCode = 'pk_' + Math.random().toString(36).substr(2,9).toUpperCase();
     let position = Math.floor(Math.random()*3000) + 4000;
 
-    function track(event, data={}) { window.dataLayer && window.dataLayer.push({ event, ...data }); }
+    // ── DataLayer Helper ──────────────────────────────────────────────────────
+    function track(eventName, data={}) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: eventName, ...data });
+    }
 
+    // ── Page View ─────────────────────────────────────────────────────────────
+    track('pk_page_view', {
+        page_variant: 'v1_waitlist',
+        traffic_source: referrer
+    });
+
+    // ── Validation Helpers ────────────────────────────────────────────────────
     function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
     function isValidPhone(v) { return v.replace(/\D/g,'').length >= 9; }
 
@@ -447,12 +458,21 @@
         checkValid();
     });
 
+    // ── Lead Submission ───────────────────────────────────────────────────────
     document.getElementById('pk_waitlist_submit').addEventListener('click', () => {
         const email = document.getElementById('emailInput').value.trim();
         const phone = '+92' + document.getElementById('phoneInput').value.trim();
         if (!isValidEmail(email) || !isValidPhone(phone)) return;
         position = Math.max(1, position - Math.floor(Math.random()*150+50));
-        track('quiz_interaction', { question_id: 'submit', selected_option: 'completed', email, phone, ref: referrer });
+
+        track('pk_lead_submitted', {
+            page_variant: 'v1_waitlist',
+            email: email,
+            phone: phone,
+            member_id: position,
+            traffic_source: referrer
+        });
+
         document.getElementById('formState').classList.add('hidden');
         document.getElementById('successState').classList.remove('hidden');
         document.getElementById('positionNum').textContent = position.toLocaleString();
@@ -461,9 +481,22 @@
         document.getElementById('positionOrdinal').textContent = (ordinals[(v-20)%10] || ordinals[v] || ordinals[0]);
     });
 
+    // ── Tools Link Click (Gift) ───────────────────────────────────────────────
+    document.getElementById('pk_tools_link').addEventListener('click', () => {
+        track('pk_tools_link_clicked', {
+            page_variant: 'v1_waitlist',
+            link_position: 'gift_link',
+            member_id: position
+        });
+    });
+
+    // ── WhatsApp Share Click ──────────────────────────────────────────────────
     document.getElementById('pk_whatsapp_share').addEventListener('click', () => {
+        track('pk_whatsapp_share_clicked', {
+            page_variant: 'v1_waitlist',
+            member_id: position
+        });
         const msg = `Hey! I just joined the Cenoa Pakistan movement to get a free USD account and 30+ freelancer tools. Check it out: https://cenoa-pakistan.vercel.app/?utm_source=whatsapp&utm_medium=referral&utm_campaign=pakistan_movement&utm_content=v1_share`;
-        track('referral_share', { platform: 'whatsapp', version: 'v1', member_id: position });
         window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
     });
 
